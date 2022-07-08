@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 import Home from './components/Home';
 import Piano from './components/Piano';
-import Slam from './components/Slam';
+import Slam from './components/Lionfisher';
 import resume from './documents/hagen_oneill_resume.pdf';
 
 export default function App() {
