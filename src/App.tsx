@@ -3,7 +3,10 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 import Home from './components/Home';
 import Piano from './components/Piano';
-import Slam from './components/Lionfisher';
+import Lionfisher from './components/Lionfisher';
+import Professional from './components/Professional';
+import Skeetshooter from './components/Skeetshooter';
+import Startup from './components/Startup';
 import resume from './documents/hagen_oneill_resume.pdf';
 
 export default function App() {
@@ -11,46 +14,27 @@ export default function App() {
     <div>  
     <Router>
       <div className="app">
-      <nav>
-        <h1>Hagen O'Neill</h1>
-        <ul> 
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/slam">Slam</Link></li>
-          <li><Link to="/piano">Piano</Link></li>
-          <li><a href={resume}>Resume</a></li>
+      <nav className="app--nav">
+        <ul className="app--nav-ul"> 
+          <li className="app--nav-li -home"><Link to="/">Hagen O'Neill</Link></li>
+          <li className="app--nav-li"><Link to="/projects/lionfish-hunter">Lionfish Hunter</Link></li>
+          <li className="app--nav-li"><Link to="/projects/piano-hero">Piano Hero</Link></li>
+          <li className="app--nav-li"><Link to="/projects/automated-skeet-shooter">Automated Skeet Shooter</Link></li>
+          <li className="app--nav-li"><Link to="/experience/start-up">Start-up</Link></li>
+          <li className="app--nav-li"><Link to="/experience/professional">Professional Experience</Link></li>
+          <li className="app--nav-li"><a href={resume}>Resume</a></li>
         </ul>
       </nav>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/slam" element={<Slam />} />
-          <Route path="/piano" element={<Piano />} />
+          <Route path="/projects/lionfish-hunter" element={<Lionfisher />} />
+          <Route path="/projects/piano-hero" element={<Piano />} />
+          <Route path="/projects/automated-skeet-shooter" element={<Skeetshooter />} />
+          <Route path="/experience/start-up" element={<Startup />} />
+          <Route path="/experience/professional" element={<Professional />} />
         </Routes>
       </div>
     </Router>
     </div>
   );
 }
-
-
-
-// export default function App() {
-//   return (
-//     <Router>
-//       <div className="app">
-//         <ul>
-//           <li><Link to="/">Home</Link></li>
-//           <li><Link to="/slam">Slam</Link></li>
-//           <li><Link to="/piano">Piano</Link></li>
-//         </ul>
-
-//         <hr />
-        
-//         <Routes>
-//           <Route path="/" element={<Home />} />
-//           <Route path="/slam" element={<Slam />} />
-//           <Route path="/piano" element={<Piano />} />
-//         </Routes>
-//       </div>
-//     </Router>
-//   );
-// }
