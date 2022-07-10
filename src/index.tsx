@@ -13,9 +13,7 @@ const root = ReactDOM.createRoot(rootElement);
 
 root.render(
   <StrictMode>
-    //! fix
      <embed className="temp--resume" src={resume}/>
     {/* <App /> */}
-    //!
   </StrictMode>
 );
