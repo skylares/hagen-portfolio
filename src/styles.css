@@ -21,10 +21,22 @@ html, body, h1, h2, h3, h4, h5, h6, p, a, button, section, main, ul {
 }
 
 .app--nav-li > a {
-  color: red;
   text-decoration: none;
 }
 
 .app--nav-li.-home {
   margin-right: auto;
+}
+
+
+
+/********/
+/* TEMP */
+/********/
+
+
+.temp--resume {
+
+  height: 100vh;
+  width: 100vw;
 }
